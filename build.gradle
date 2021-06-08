@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'me.therandomgamer.sumo'
+version '0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.10'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "me.therandomgamer.sumo.SumoWrestle"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

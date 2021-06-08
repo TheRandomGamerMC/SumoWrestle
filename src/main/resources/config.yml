@@ -1,0 +1,14 @@
+initialspawnpoint:
+  x: -114
+  y: 66
+  z: 213
+
+border:
+  corner1:
+    x: -102
+    y: 63
+    z: 228
+  corner2:
+    x: -91
+    y: 63
+    z: 222
