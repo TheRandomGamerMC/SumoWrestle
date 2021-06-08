@@ -1,3 +1,7 @@
 name: SumoWrestle
 main: me.therandomgamer.sumo.SumoWrestle
 version: 0.1
+commands:
+  sumo:
+    description: main command for sumo plugin, execute /sumo help for mre info
+    usage: /sumo <subcommand>

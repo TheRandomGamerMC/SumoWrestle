@@ -8,7 +8,8 @@ public class SumoWrestle extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
-        AnnotationHandler annotationHandler = new AnnotationHandler(this);
+        AnnotationHandler annotationHandler = new AnnotationHandler(this, "sumo");
         annotationHandler.registerListeners();
+        annotationHandler.registerCommands();
     }
 }

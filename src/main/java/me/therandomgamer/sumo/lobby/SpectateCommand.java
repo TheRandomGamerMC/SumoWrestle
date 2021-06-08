@@ -11,6 +11,8 @@ public class SpectateCommand implements CommandExecutor {
     @Override
     @AnnotationHandler.Command(subCommand = "spectate")
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        return false;
+        sender.sendMessage("Spectate Command has been send");
+        return true;
+
     }
 }
